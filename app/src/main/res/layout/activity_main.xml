@@ -1,0 +1,128 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Arka plan resmi -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wallpaper" />
+
+    <!-- ScrollView İçerik -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Başlık -->
+
+            <!-- Diğer bileşenler -->
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Vücut Kitle İndeksi Hesaplama"
+                android:textColor="#3E4A59"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editTextBoy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Boy (cm)"
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:textColor="#3E4A59" />
+
+            <EditText
+                android:id="@+id/editTextKilo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kilo (kg)"
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:textColor="#3E4A59"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/editTextYas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Yaş (yıl)"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textColor="#3E4A59"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Cinsiyet Seçimi -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cinsiyetinizi Seçin:"
+                android:textSize="18sp"
+                android:textColor="#3E4A59"
+                android:layout_marginBottom="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupCinsiyet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioErkek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Erkek"
+                    android:textColor="#3E4A59"/>
+
+                <RadioButton
+                    android:id="@+id/radioKadin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kadın"
+                    android:textColor="#3E4A59"/>
+            </RadioGroup>
+
+            <!-- Hesapla Butonu -->
+            <Button
+                android:id="@+id/buttonHesapla"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hesapla"
+                android:backgroundTint="#FF5722"
+                android:textColor="#FFFFFF"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Sonuç Görüntüleme -->
+            <TextView
+                android:id="@+id/textViewSonuc"
+                android:layout_width="match_parent"
+                android:layout_height="179dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="Sonuç burada görünecek."
+                android:textColor="#3E4A59"
+                android:textSize="18sp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
+
